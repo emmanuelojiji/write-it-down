@@ -1,0 +1,27 @@
+.section {
+  &:hover {
+    background: rgb(243, 243, 243);
+    padding-left: 30px;
+  }
+  transition: 0.2s ease-in-out;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
+.section-type {
+  margin-bottom: 20px;
+}
+
+.lines-input {
+  width: 100%;
+  background: none;
+  outline: none;
+}
+
+/* placeholder code */
+[contentEditable="true"]:empty:before {
+  content: attr(placeholder);
+  opacity: 0.6;
+  cursor: text;
+}
