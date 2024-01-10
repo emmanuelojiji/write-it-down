@@ -1,9 +1,11 @@
 import "./Editor.scss";
 import { useState } from "react";
 import { Section } from "./Section";
+import { sectionsData } from "./sectionsData";
 
 const Editor = () => {
   const [projectTitle, setProjectTitle] = useState("My heartbreak song");
+  const [sections, setSections] = useState(sectionsData);
   return (
     <div className="editor">
       <input
@@ -14,7 +16,9 @@ const Editor = () => {
         placeholder="Untitled"
       ></input>
 
-      <Section/>
+      {sections.map((section) => (
+        <Section lines={section.lines} />
+      ))}
     </div>
   );
 };
