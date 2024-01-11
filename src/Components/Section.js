@@ -1,7 +1,14 @@
 import "./Section.scss";
 import { useEffect, useState } from "react";
 
-export const Section = ({ onClick, sections, lines, setSections, index }) => {
+export const Section = ({
+  onClick,
+  sections,
+  lines,
+  setSections,
+  index,
+  isSelected,
+}) => {
   const handleLineUpdate = (sectionIndex, text) => {
     const splitLines = text.split("\n");
     const updatedSections = [...sections];
@@ -12,7 +19,7 @@ export const Section = ({ onClick, sections, lines, setSections, index }) => {
   };
 
   return (
-    <div className={`section fade-in`} onClick={onClick}>
+    <div className={`section fade-in ${isSelected}`} onClick={onClick}>
       <h2 className="section-type">Verse</h2>
       <div
         placeholder="Start typing.."

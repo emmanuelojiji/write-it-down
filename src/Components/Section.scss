@@ -15,6 +15,11 @@
   border-radius: 2px;
 }
 
+.selected {
+  padding-left: 30px;
+  background: #fafafa;
+}
+
 .fade-in {
   animation: fade-in 0.5s;
 }
@@ -31,6 +36,7 @@
 .section-type {
   margin-bottom: 20px;
   user-select: none;
+  font-weight: normal;
 }
 
 .input-container {
@@ -38,6 +44,7 @@
   background: none;
   outline: none;
   cursor: text;
+  line-height: 1.8;
 }
 
 /* placeholder code */
