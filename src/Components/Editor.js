@@ -1,8 +1,9 @@
 import "./Editor.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Section } from "./Section";
 import { sectionsData } from "./sectionsData";
 import { Helper } from "./Helper";
+import { Button } from "./Button";
 
 const Editor = () => {
   const [projectTitle, setProjectTitle] = useState("My heartbreak song");
@@ -29,16 +30,18 @@ const Editor = () => {
         setHelperVisible={setHelperVisible}
       />
       <div className="project-header">
-        <input
-          type="text"
-          className="project-title"
-          defaultValue={projectTitle}
-          maxLength="50"
-          placeholder="Untitled"
-        ></input>
-        <div className="project-status">Unfinished</div>
+        <div className="project-header-left">
+          <input
+            type="text"
+            className="project-title"
+            defaultValue={projectTitle}
+            maxLength="50"
+            placeholder="Untitled"
+          ></input>
+          <div className="project-status">Unfinished</div>
+        </div>
+        <Button text="Add New Section" onClick={() => handleAddNewSection()} />
       </div>
-      <button onClick={() => handleAddNewSection()}>Add New Section</button>
       {sections.map((section, index) => (
         <Section
           index={index}

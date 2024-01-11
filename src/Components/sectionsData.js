@@ -4,17 +4,5 @@ export const sectionsData = [
     lines: [],
     notes: [],
   },
-
-  {
-    type: "verse",
-    lines: [],
-    notes: [],
-  },
-
-  {
-    type: "verse",
-    lines: [],
-    notes: [],
-  },
   
 ];
