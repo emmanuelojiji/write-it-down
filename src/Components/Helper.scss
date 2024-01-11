@@ -1,17 +1,14 @@
 .helper {
-  width: 300px;
+  width: 0;
   height: 100vh;
   border-left: solid 1px #e1e1e1;
-  background: white;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translateX(100%);
+  background: brown;
   transition: 0.2s ease;
-  padding-top: 30px;
-  padding-left: 30px;
+  overflow: hidden;
+  margin-top: -50px;
 }
 
 .helper-visible {
-  transform: translateX(0%);
+  width: 350px;
+
 }

@@ -27,50 +27,53 @@ const Editor = () => {
   return (
     <div className="editor">
       <Header />
-      <Helper
-        helperVisible={helperVisible}
-        setHelperVisible={setHelperVisible}
-      />
+
       <main className="editor-main">
-        <div className="project-header">
-          <div className="project-header-left">
-            <div className="title-status-wrap">
-              <h1
-                className="project-title"
-                contentEditable
-                placeholder="Untitled"
-              >
-                My Heartbreak Song
-              </h1>
-              <div className="project-status">Unfinished</div>
+        <div className="editor-main-left">
+          <div className="project-header">
+            <div className="project-header-left">
+              <div className="title-status-wrap">
+                <h1
+                  className="project-title"
+                  contentEditable
+                  placeholder="Untitled"
+                >
+                  My Heartbreak Song
+                </h1>
+                <div className="project-status">Unfinished</div>
+              </div>
+              <p className="date">Started 3 days ago</p>
             </div>
-            <p className="date">Started 3 days ago</p>
+            <Button
+              text="Add New Section"
+              onClick={() => handleAddNewSection()}
+            />
           </div>
-          <Button
-            text="Add New Section"
-            onClick={() => handleAddNewSection()}
-          />
+          {sections.map((section, index) => (
+            <Section
+              index={index}
+              onClick={() => {
+                setHelperVisible(true);
+                console.log(index);
+                setSelectedSection(index);
+              }}
+              isSelected={selectedSection === index && "selected"}
+              notSelected={
+                selectedSection != "default" &&
+                selectedSection != index &&
+                "not-selected"
+              }
+              lines={section.lines}
+              section={section}
+              sections={sections}
+              setSections={setSections}
+            />
+          ))}
         </div>
-        {sections.map((section, index) => (
-          <Section
-            index={index}
-            onClick={() => {
-              setHelperVisible(true);
-              console.log(index);
-              setSelectedSection(index);
-            }}
-            isSelected={selectedSection === index && "selected"}
-            notSelected={
-              selectedSection != "default" &&
-              selectedSection != index &&
-              "not-selected"
-            }
-            lines={section.lines}
-            section={section}
-            sections={sections}
-            setSections={setSections}
-          />
-        ))}
+        <Helper
+          helperVisible={helperVisible}
+          setHelperVisible={setHelperVisible}
+        />
       </main>
     </div>
   );
