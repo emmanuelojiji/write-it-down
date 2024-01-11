@@ -6,10 +6,9 @@ import { Helper } from "./Helper";
 import { Button } from "./Button";
 
 const Editor = () => {
-  const [projectTitle, setProjectTitle] = useState("My heartbreak song");
   const [sections, setSections] = useState(sectionsData);
   const [helperVisible, setHelperVisible] = useState(false);
-  const [selectedSection, setSelectedSection] = useState();
+  const [selectedSection, setSelectedSection] = useState("default");
 
   const handleAddNewSection = () => {
     console.log("new section");
@@ -52,9 +51,14 @@ const Editor = () => {
           onClick={() => {
             setHelperVisible(true);
             console.log(index);
-            setSelectedSection(index)
+            setSelectedSection(index);
           }}
           isSelected={selectedSection === index && "selected"}
+          notSelected={
+            selectedSection != "default" &&
+            selectedSection != index &&
+            "not-selected"
+          }
           lines={section.lines}
           section={section}
           sections={sections}
