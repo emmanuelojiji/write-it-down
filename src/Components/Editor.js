@@ -47,6 +47,7 @@ const Editor = () => {
             <Button
               text="Add New Section"
               onClick={() => handleAddNewSection()}
+              shake={helperVisible && "shake"}
             />
           </div>
           {sections.map((section, index) => (

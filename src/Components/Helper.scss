@@ -2,13 +2,16 @@
   width: 0;
   height: 100vh;
   border-left: solid 1px #e1e1e1;
-  background: brown;
   transition: 0.2s ease;
   overflow: hidden;
   margin-top: -50px;
+
+  .helper-inner{
+    padding-top: 30px;
+    padding-left: 30px;
+  }
 }
 
 .helper-visible {
   width: 350px;
-
 }
