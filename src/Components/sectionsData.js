@@ -10,5 +10,7 @@ export const sectionsData = [
       "Long nights, strange men",
     ],
     notes: [],
+    locked: false
+,
   },
 ];

@@ -80,6 +80,9 @@ const Editor = () => {
         <Helper
           helperVisible={helperVisible}
           setHelperVisible={setHelperVisible}
+          sections={sections}
+          setSections={setSections}
+          selectedSection={selectedSection}
         />
       </main>
     </div>
