@@ -1,6 +1,6 @@
 .section {
   &:hover {
-    background: rgb(248, 248, 248);
+    background: #fafafa;
     padding-left: 30px;
   }
   transition: 0.2s ease-in-out;
@@ -8,9 +8,11 @@
   padding-bottom: 30px;
   cursor: pointer;
 
-  p{
+  p {
     outline: none;
   }
+  width: 50%;
+  border-radius: 2px;
 }
 
 .section-type {
@@ -18,10 +20,11 @@
   user-select: none;
 }
 
-.lines-input {
+.input-container {
   width: 100%;
   background: none;
   outline: none;
+  cursor: text;
 }
 
 /* placeholder code */

@@ -1,15 +1,17 @@
-.helper{
-    width: 300px;
-    height: 100vh;
-    border-left: solid 1px #e1e1e1;
-    background: white;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translateX(100%);
-    transition: 0.2s ease;
+.helper {
+  width: 300px;
+  height: 100vh;
+  border-left: solid 1px #e1e1e1;
+  background: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: 0.2s ease;
+  padding-top: 50px;
+  padding-left: 50px;
 }
 
 .helper-visible {
-    transform: translateX(0%);
-  }
+  transform: translateX(0%);
+}

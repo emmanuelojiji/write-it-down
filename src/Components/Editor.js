@@ -9,6 +9,18 @@ const Editor = () => {
   const [sections, setSections] = useState(sectionsData);
   const [helperVisible, setHelperVisible] = useState(false);
 
+  const handleAddNewSection = () => {
+    console.log("new section");
+    setSections([
+      ...sections,
+      {
+        type: "verse",
+        lines: [],
+        notes: [],
+      },
+    ]);
+  };
+
   console.log(sections);
   return (
     <div className="editor">
@@ -16,18 +28,24 @@ const Editor = () => {
         helperVisible={helperVisible}
         setHelperVisible={setHelperVisible}
       />
-      <input
-        type="text"
-        className="project-title"
-        defaultValue={projectTitle}
-        maxLength="50"
-        placeholder="Untitled"
-      ></input>
-
+      <div className="project-header">
+        <input
+          type="text"
+          className="project-title"
+          defaultValue={projectTitle}
+          maxLength="50"
+          placeholder="Untitled"
+        ></input>
+        <div className="project-status">Unfinished</div>
+      </div>
+      <button onClick={() => handleAddNewSection()}>Add New Section</button>
       {sections.map((section, index) => (
         <Section
           index={index}
-          onClick={() => setHelperVisible(true)}
+          onClick={() => {
+            setHelperVisible(true);
+            console.log(index);
+          }}
           lines={section.lines}
           section={section}
           sections={sections}
