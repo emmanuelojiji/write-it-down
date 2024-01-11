@@ -11,6 +11,10 @@ const Editor = () => {
   const [helperVisible, setHelperVisible] = useState(false);
   const [selectedSection, setSelectedSection] = useState("default");
 
+  useEffect(() => {
+    console.log("length: " + sections.length);
+  }, [sections]);
+
   const handleAddNewSection = () => {
     console.log("new section");
     setSections([
@@ -21,6 +25,8 @@ const Editor = () => {
         notes: [],
       },
     ]);
+
+    setSelectedSection(sections.length - 0);
   };
 
   console.log(sections);
