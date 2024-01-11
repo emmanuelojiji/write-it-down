@@ -33,7 +33,11 @@ export const Section = ({
           console.log(e.target.innerText);
           handleLineUpdate(index, e.target.innerText);
         }}
-      ></div>
+      >
+        {lines.map((line) => (
+          <p className="line">{line}</p>
+        ))}
+      </div>
     </div>
   );
 };

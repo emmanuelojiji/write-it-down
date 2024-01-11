@@ -5,8 +5,11 @@
   transition: 0.2s ease;
   overflow: hidden;
   margin-top: -50px;
+  position: sticky;
+  top: 0;
+  right: 0; 
 
-  .helper-inner{
+  .helper-inner {
     padding-top: 30px;
     padding-left: 30px;
   }
