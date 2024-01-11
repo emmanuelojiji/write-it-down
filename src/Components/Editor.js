@@ -5,6 +5,7 @@ import { sectionsData } from "./sectionsData";
 import { Helper } from "./Helper";
 import { Button } from "./Button";
 import Header from "./Header";
+import { Tag } from "./Tag";
 
 const Editor = () => {
   const [sections, setSections] = useState(sectionsData);
@@ -49,6 +50,11 @@ const Editor = () => {
                 <div className="project-status">Unfinished</div>
               </div>
               <p className="date">Started 3 days ago</p>
+              <div className="genre-container">
+                <Tag text="Afrobeats" />
+                <Tag text="Pop"/>
+                <Tag text="Dancehall" />
+              </div>
             </div>
             <Button
               text="Add New Section"

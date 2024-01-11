@@ -1,0 +1,16 @@
+.tag{
+    background: rgb(255, 71, 65, 0.5);
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.genre-container{
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}

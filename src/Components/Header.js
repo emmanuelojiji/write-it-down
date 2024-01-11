@@ -3,7 +3,7 @@ import "./Header.scss"
 const Header = () => {
   return (
     <header>
-      <h3>Soundmode</h3>
+      <h3>Write It Down</h3>
     </header>
   );
 };
