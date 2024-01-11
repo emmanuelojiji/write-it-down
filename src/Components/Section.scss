@@ -1,12 +1,16 @@
 .section {
   &:hover {
-    background: rgb(243, 243, 243);
+    background: rgb(248, 248, 248);
     padding-left: 30px;
   }
   transition: 0.2s ease-in-out;
   padding-top: 30px;
   padding-bottom: 30px;
   cursor: pointer;
+
+  p{
+    outline: none;
+  }
 }
 
 .section-type {

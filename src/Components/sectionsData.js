@@ -8,4 +8,12 @@ export const sectionsData = [
     ],
     notes: [],
   },
+
+  {
+    type: "verse",
+    lines: [
+      "Lights gone, days end", "Struggling to pay rent", "Long nights, strange men",
+    ],
+    notes: [],
+  },
 ];
