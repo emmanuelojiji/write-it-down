@@ -1,4 +1,15 @@
-.projects-main{
-    padding-left: 5%;
-    padding-top: 50px;
+.projects-main {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 50px;
+}
+
+.projects-main-desc {
+  margin-bottom: 50px;
+}
+
+.project-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
