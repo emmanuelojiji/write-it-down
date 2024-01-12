@@ -26,6 +26,7 @@
 }
 
 .project-title {
+  color: #37352f;
   font-size: 40px;
   border: 0;
   outline: 0;
@@ -34,8 +35,6 @@
   text-transform: capitalize;
   margin-right: 20px;
   font-weight: 600;
-  padding-top: 10px;
-  padding-bottom: 10px;
   transition: 0.2s ease-in-out;
 
 }
@@ -69,4 +68,22 @@
 .editor-main-left-content{
   width:100%;
   max-width: 500px;
+}
+
+.shake {
+  animation: shake 0.4s;
+  animation-delay: 0.2s;
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(-20px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
 }

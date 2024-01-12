@@ -37,7 +37,9 @@ const Editor = () => {
 
       <main className="editor-main">
         <div className="editor-main-left">
-          <div className="editor-main-left-content">
+          <div
+            className={`editor-main-left-content ${helperVisible && "shake"}`}
+          >
             <div className="project-header">
               <div className="project-header-left">
                 <div className="title-status-wrap">
@@ -56,11 +58,12 @@ const Editor = () => {
                   <Tag text="Indie" />
                 </div>
               </div>
-              {/*<Button
-              text="Add New Section"
-              onClick={() => handleAddNewSection()}
-              shake={helperVisible && "shake"}
-  />*/}
+              {
+                <Button
+                  text="Add New Section"
+                  onClick={() => handleAddNewSection()}
+                />
+              }
             </div>
             {sections.map((section, index) => (
               <Section

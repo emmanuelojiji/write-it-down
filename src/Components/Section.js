@@ -11,14 +11,14 @@ export const Section = ({
   isSelected,
   notSelected,
 }) => {
-  const handleLineUpdate = (sectionIndex, text) => {
+  /*const handleLineUpdate = (sectionIndex, text) => {
     const splitLines = text.split("\n");
     const updatedSections = [...sections];
     updatedSections[sectionIndex].lines = splitLines;
     setSections(updatedSections);
 
     console.log(sections);
-  };
+  };*/
 
   return (
     <div
@@ -32,11 +32,10 @@ export const Section = ({
         contentEditable={!section.locked && true}
         onInput={(e) => {
           console.log(e.target.innerText);
-          handleLineUpdate(index, e.target.innerText);
         }}
       >
         {lines.map((line) => (
-          <p className="line">{line}</p>
+          <p>{line}</p>
         ))}
       </div>
     </div>
