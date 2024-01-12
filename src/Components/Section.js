@@ -20,12 +20,19 @@ export const Section = ({
     console.log(sections);
   };*/
 
+  const [optionsVisible, setOptionsVisible] = useState(false);
+
+ 
+
   return (
     <div
       className={`section fade-in ${isSelected} ${notSelected}`}
       onClick={onClick}
     >
-      <h2 className="section-type">Verse</h2>
+      <div className="section-type-wrap">
+        <h2 className="section-type chosen">Verse</h2>
+        
+      </div>
       <div
         placeholder="Start typing.."
         className="input-container"

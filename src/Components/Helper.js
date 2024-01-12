@@ -26,7 +26,7 @@ export const Helper = ({
           className="lock"
           onClick={() => handleToggleLock(selectedSection)}
         >
-          LOCK
+          LOCK VERSE
         </button>
         <p>
           {selectedSection != "default" && sections[selectedSection].locked}

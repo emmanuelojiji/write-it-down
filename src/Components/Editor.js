@@ -54,8 +54,8 @@ const Editor = () => {
                 <p className="date">Started 3 days ago</p>
                 <div className="genre-container">
                   <Tag text="Alternative" />
-                  <Tag text="Pop" />
-                  <Tag text="Indie" />
+                  <Tag text="Pop" background="rgba(84, 63, 217, 0.51)" />
+                  
                 </div>
               </div>
               {
