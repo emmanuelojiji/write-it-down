@@ -1,11 +1,11 @@
 import "./Editor.scss";
 import { useEffect, useState } from "react";
-import { Section } from "./Section";
-import { sectionsData } from "./sectionsData";
-import { Helper } from "./Helper";
-import { Button } from "./Button";
-import Header from "./Header";
-import { Tag } from "./Tag";
+import { Section } from "../Components/Section";
+import { sectionsData } from "../Components/sectionsData";
+import { Helper } from "../Components/Helper";
+import { Button } from "../Components/Button";
+import Header from "../Components/Header";
+import { Tag } from "../Components/Tag";
 
 const Editor = () => {
   const [sections, setSections] = useState(sectionsData);

@@ -11,14 +11,14 @@ export const Section = ({
   isSelected,
   notSelected,
 }) => {
-  /*const handleLineUpdate = (sectionIndex, text) => {
+  const handleLineUpdate = (sectionIndex, text) => {
     const splitLines = text.split("\n");
     const updatedSections = [...sections];
     updatedSections[sectionIndex].lines = splitLines;
     setSections(updatedSections);
 
     console.log(sections);
-  };*/
+  };
 
   const [optionsVisible, setOptionsVisible] = useState(false);
 
