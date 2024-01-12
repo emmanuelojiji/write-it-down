@@ -1,11 +1,14 @@
 import "./App.scss";
-import Editor from "./Components/Editor";
+import { Editor } from "./Pages/Editor";
 import Header from "./Components/Header";
+import { Authentication } from "./Pages/Authentication";
 
 function App() {
   return (
     <div className="App">
-      <Editor />
+    
+     
+      <Authentication/>
     </div>
   );
 }

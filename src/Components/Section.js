@@ -7,22 +7,19 @@ export const Section = ({
   sections,
   lines,
   setSections,
-  index,
   isSelected,
   notSelected,
 }) => {
-  const handleLineUpdate = (sectionIndex, text) => {
+  {/*const handleLineUpdate = (sectionIndex, text) => {
     const splitLines = text.split("\n");
     const updatedSections = [...sections];
     updatedSections[sectionIndex].lines = splitLines;
     setSections(updatedSections);
 
     console.log(sections);
-  };
+  };*/}
 
   const [optionsVisible, setOptionsVisible] = useState(false);
-
- 
 
   return (
     <div
@@ -31,7 +28,6 @@ export const Section = ({
     >
       <div className="section-type-wrap">
         <h2 className="section-type chosen">Verse</h2>
-        
       </div>
       <div
         placeholder="Start typing.."

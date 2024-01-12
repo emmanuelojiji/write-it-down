@@ -7,7 +7,7 @@ import { Button } from "../Components/Button";
 import Header from "../Components/Header";
 import { Tag } from "../Components/Tag";
 
-const Editor = () => {
+export const Editor = () => {
   const [sections, setSections] = useState(sectionsData);
   const [helperVisible, setHelperVisible] = useState(false);
   const [selectedSection, setSelectedSection] = useState("default");
@@ -24,6 +24,7 @@ const Editor = () => {
         type: "verse",
         lines: [],
         notes: [],
+        locked: false,
       },
     ]);
 
@@ -55,7 +56,6 @@ const Editor = () => {
                 <div className="genre-container">
                   <Tag text="Alternative" />
                   <Tag text="Pop" background="rgba(84, 63, 217, 0.51)" />
-                  
                 </div>
               </div>
               {
@@ -98,5 +98,3 @@ const Editor = () => {
     </div>
   );
 };
-
-export default Editor;
