@@ -1,7 +1,7 @@
-.editor-main{
-  display:flex;
+.editor-main {
+  display: flex;
 
-  .editor-main-left{
+  .editor-main-left {
     width: 100%;
     padding-right: 5%;
   }
@@ -34,6 +34,10 @@
   text-transform: capitalize;
   margin-right: 20px;
   font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 0.2s ease-in-out;
+
 }
 
 .project-status {
@@ -52,7 +56,17 @@
   color: #626262;
 }
 
-.editor-main{
+.editor-main {
   padding-left: 5%;
-  padding-top: 50px;
+  padding-top: 100px;
+}
+
+.editor-main-left{
+  display: flex;
+  justify-content: center;
+}
+
+.editor-main-left-content{
+  width:100%;
+  max-width: 500px;
 }

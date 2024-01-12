@@ -37,51 +37,52 @@ const Editor = () => {
 
       <main className="editor-main">
         <div className="editor-main-left">
-          <div className="project-header">
-            <div className="project-header-left">
-              <div className="title-status-wrap">
-                <h1
-                  className="project-title"
-                  contentEditable
-                  placeholder="Untitled"
-                >
-                  My Heartbreak Song
-                </h1>
-                <div className="project-status">Unfinished</div>
+          <div className="editor-main-left-content">
+            <div className="project-header">
+              <div className="project-header-left">
+                <div className="title-status-wrap">
+                  <h1
+                    className="project-title"
+                    contentEditable
+                    placeholder="Untitled"
+                  >
+                    The A team
+                  </h1>
+                </div>
+                <p className="date">Started 3 days ago</p>
+                <div className="genre-container">
+                  <Tag text="Alternative" />
+                  <Tag text="Pop" />
+                  <Tag text="Indie" />
+                </div>
               </div>
-              <p className="date">Started 3 days ago</p>
-              <div className="genre-container">
-                <Tag text="Afrobeats" />
-                <Tag text="Pop"/>
-                <Tag text="Dancehall" />
-              </div>
-            </div>
-            <Button
+              {/*<Button
               text="Add New Section"
               onClick={() => handleAddNewSection()}
               shake={helperVisible && "shake"}
-            />
+  />*/}
+            </div>
+            {sections.map((section, index) => (
+              <Section
+                index={index}
+                onClick={() => {
+                  setHelperVisible(true);
+                  console.log(index);
+                  setSelectedSection(index);
+                }}
+                isSelected={selectedSection === index && "selected"}
+                notSelected={
+                  selectedSection != "default" &&
+                  selectedSection != index &&
+                  "not-selected"
+                }
+                lines={section.lines}
+                section={section}
+                sections={sections}
+                setSections={setSections}
+              />
+            ))}
           </div>
-          {sections.map((section, index) => (
-            <Section
-              index={index}
-              onClick={() => {
-                setHelperVisible(true);
-                console.log(index);
-                setSelectedSection(index);
-              }}
-              isSelected={selectedSection === index && "selected"}
-              notSelected={
-                selectedSection != "default" &&
-                selectedSection != index &&
-                "not-selected"
-              }
-              lines={section.lines}
-              section={section}
-              sections={sections}
-              setSections={setSections}
-            />
-          ))}
         </div>
         <Helper
           helperVisible={helperVisible}
