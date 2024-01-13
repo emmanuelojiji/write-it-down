@@ -1,20 +1,21 @@
 import "./Editor.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Section } from "../Components/Section";
 import { sectionsData } from "../Components/sectionsData";
 import { Helper } from "../Components/Helper";
 import { Button } from "../Components/Button";
 import Header from "../Components/Header";
 import { Tag } from "../Components/Tag";
-
+import { projectsData } from "../projectsData";
+import { useParams } from "react-router-dom";
 export const Editor = () => {
   const [sections, setSections] = useState(sectionsData);
   const [helperVisible, setHelperVisible] = useState(false);
   const [selectedSection, setSelectedSection] = useState("default");
 
-  useEffect(() => {
-    console.log("length: " + sections.length);
-  }, [sections]);
+  const { id } = useParams();
+
+  const project = projectsData.find((project) => project.id === id);
 
   const handleAddNewSection = () => {
     console.log("new section");
@@ -49,13 +50,14 @@ export const Editor = () => {
                     contentEditable
                     placeholder="Untitled"
                   >
-                    The A team
+                    {project.title}
                   </h1>
                 </div>
                 <p className="date">Started 3 days ago</p>
                 <div className="genre-container">
-                  <Tag text="Alternative" />
-                  <Tag text="Pop" background="rgba(84, 63, 217, 0.51)" />
+                  {project.genre.map((genre) => (
+                    <Tag text={genre} />
+                  ))}
                 </div>
               </div>
               {
