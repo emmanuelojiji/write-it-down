@@ -1,9 +1,10 @@
 import "./Header.scss";
+import {Link} from "react-router-dom"
 
 const Header = () => {
   return (
     <header>
-      <h3>Lyric Library</h3>
+      <Link to="/projects"><h3>Lyric Library</h3></Link>
 
       <div className="avatar"></div>
     </header>

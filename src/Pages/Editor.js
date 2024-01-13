@@ -60,7 +60,6 @@ export const Editor = () => {
                   ))}
                 </div>
               </div>
-              
             </div>
             {sections.map((section, index) => (
               <Section

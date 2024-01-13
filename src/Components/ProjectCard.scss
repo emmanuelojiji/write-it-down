@@ -1,3 +1,11 @@
+.project-card-link {
+  &:hover {
+    button {
+      transform: translateY(0%);
+    }
+  }
+}
+
 .gradient-box {
   max-width: 280px;
   width: 100%;
@@ -10,14 +18,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
-
-  &:hover {
-    button {
-      transform: translateY(0%);
- 
-    }
-  }
+  position: relative;
 
   button {
     transform: translateY(500%);
@@ -36,4 +37,21 @@
 
 .not-selected {
   opacity: 0.5;
+}
+
+.project-status{
+  width: fit-content;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: solid 1px white;
+  border-radius: 500px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
 }

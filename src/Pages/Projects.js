@@ -27,6 +27,7 @@ export const Projects = () => {
             <ProjectCard
               id={project.id}
               title={project.title}
+              projectStatus={project.status}
               desc={project.desc}
               hoveredProject={project.title}
               
