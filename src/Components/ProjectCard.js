@@ -17,7 +17,7 @@ export const ProjectCard = ({ title, desc, id, projectStatus, view }) => {
           <p>{desc}</p>
         </div>
       ) : (
-        <div className={`project-card`}>
+        <div className={`project-card list`}>
           <h3>{title}</h3>
           <p>{desc}</p>
         </div>

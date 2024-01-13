@@ -12,6 +12,17 @@ header {
   background: white;
 }
 
+.header-right{
+  display: flex;
+  align-items: center;
+}
+
+.tools-container{
+  margin-right: 50px;
+  display: flex;
+  gap: 20px;
+}
+
 .avatar{
   height: 35px;
   width: 35px;
