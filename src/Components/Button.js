@@ -1,9 +1,9 @@
 import "./Button.scss";
 
-export const Button = ({ text, onClick, borderRadius }) => {
+export const Button = ({ text, type, onClick, borderRadius }) => {
   return (
     <button
-      className={`button`}
+      className={`button ${type}`}
       onClick={onClick}
       style={{ borderRadius: borderRadius }}
     >

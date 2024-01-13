@@ -64,11 +64,24 @@
 .editor-main-left {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .editor-main-left-content {
   width: 100%;
   max-width: 500px;
+ 
+}
+
+.new-section-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background: black;
+  position: fixed;
+  bottom: 50px;
+  left: 500px;
+  cursor: pointer;
 }
 
 .shake {
@@ -88,4 +101,3 @@
     }
   }
 }
-

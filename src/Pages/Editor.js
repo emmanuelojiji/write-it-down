@@ -83,7 +83,12 @@ export const Editor = () => {
                 setSections={setSections}
               />
             ))}
+            
           </div>
+          <div
+              className="new-section-button"
+              onClick={() => handleAddNewSection()}
+            ></div>
         </div>
         <Helper
           helperVisible={helperVisible}

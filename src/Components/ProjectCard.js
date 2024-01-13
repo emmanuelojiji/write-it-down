@@ -11,15 +11,15 @@ export const ProjectCard = ({ title, desc, id, projectStatus, view }) => {
         <div className={`project-card`}>
           <div className="gradient-box">
             <div className="project-status">{projectStatus}</div>
-            <Button text="Continue" />
+            <Button text="Continue" type="btn-transparent" />
           </div>
-          <h3>{title}</h3>
-          <p>{desc}</p>
+          <h3 className="project-card-title">{title}</h3>
+          <p className="project-card-desc">{desc}</p>
         </div>
       ) : (
         <div className={`project-card list`}>
-          <h3>{title}</h3>
-          <p>{desc}</p>
+          <h3 className="project-card-title">{title}</h3>
+          <p className="project-card-desc">{desc}</p>
         </div>
       )}
     </Link>

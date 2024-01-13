@@ -2,7 +2,7 @@ export const projectsData = [
   {
     id: "a-team",
     title: "A team",
-    desc: "Lorem ipsum dolor sit amet consectetur.",
+    desc: "a woman struggling with drug addiction and the harsh realities of life on the streets.",
     genre: ["pop", "alternative"],
     status: "finished",
   },
@@ -10,15 +10,15 @@ export const projectsData = [
   {
     id: "chasing-pavements",
     title: "Chasing pavements",
-    desc: "Lorem ipsum dolor sit amet consectetur.",
+    desc: "Should I give up or should I just keep trying to run after him when there's nothing there.",
     genre: ["rock", "country"],
     status: "finished",
     background: [],
   },
   {
-    id: "writings-on-the-wall",
-    title: "Writings on the wall",
-    desc: "Lorem ipsum dolor sit amet consectetur.",
+    id: "do-4-love",
+    title: "Do 4 Love",
+    desc: "The song is all about a deep and irresistible love",
     genre: ["gospel"],
     status: "finished",
     background: [],
