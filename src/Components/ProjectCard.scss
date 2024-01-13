@@ -2,9 +2,38 @@
   max-width: 280px;
   width: 100%;
   height: 280px;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-bottom: 25px;
   background: brown;
+  background: linear-gradient(239deg, #e33535 23.97%, #dc5cf0 83.42%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 
-  //background: linear-gradient(#E33535, #DC5CF0);
+
+  &:hover {
+    button {
+      transform: translateY(0%);
+ 
+    }
+  }
+
+  button {
+    transform: translateY(500%);
+    transition: 0.2s ease-in-out;
+  }
+
+  .slide-up {
+    animation: slide-up 0.3s forwards;
+    @keyframes slide-up {
+      to {
+        transform: translateY(0%);
+      }
+    }
+  }
+}
+
+.not-selected {
+  opacity: 0.5;
 }

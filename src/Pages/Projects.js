@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "../Components/Button";
 import Header from "../Components/Header";
 import { ProjectCard } from "../Components/ProjectCard";
@@ -5,6 +6,8 @@ import { projectsData } from "../projectsData";
 import "./Projects.scss";
 
 export const Projects = () => {
+  const [hoveredCard, setHoveredCard] = useState();
+
   return (
     <div className="projects">
       <Header />
@@ -25,6 +28,8 @@ export const Projects = () => {
               id={project.id}
               title={project.title}
               desc={project.desc}
+              hoveredProject={project.title}
+              
             />
           ))}
         </div>
