@@ -1,7 +1,7 @@
-.projects-main-header{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 75px;
+.projects-main-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
 }
 
 .projects-main {
@@ -10,13 +10,23 @@
   padding-top: 50px;
 }
 
-.projects-main-heading{
+.projects-main-heading {
   margin-bottom: 12px;
 }
 
-
 .project-card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 50px;
+
+  &.card-view {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.list-view {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.view-toggle{
+  margin-right: 25px;
 }

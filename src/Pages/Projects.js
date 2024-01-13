@@ -7,7 +7,9 @@ import "./Projects.scss";
 
 export const Projects = () => {
   const [hoveredCard, setHoveredCard] = useState();
-  const [user, setUser] = useState(true)
+  const [user, setUser] = useState(true);
+
+  const [view, setView] = useState("card");
 
   return (
     <div className="projects">
@@ -20,10 +22,19 @@ export const Projects = () => {
               Create a new project or continue where you left off
             </p>
           </div>
-          <Button text="Create New Project" />
+          <div>
+            <button className="view-toggle" onClick={() => setView(view === "card" ? "list" : "card")}>
+              List view
+            </button>
+            <Button text="Create New Project" />
+          </div>
         </div>
 
-        <div className="project-card-container">
+        <div
+          className={`project-card-container ${
+            view === "card" ? "card-view" : "list-vew"
+          }`}
+        >
           {projectsData.map((project) => (
             <ProjectCard
               id={project.id}
@@ -31,7 +42,7 @@ export const Projects = () => {
               projectStatus={project.status}
               desc={project.desc}
               hoveredProject={project.title}
-              
+              view={view}
             />
           ))}
         </div>
