@@ -1,3 +1,8 @@
+.projects-main-header{
+    display: flex;
+    justify-content: space-between;
+}
+
 .projects-main {
   padding-left: 5%;
   padding-right: 5%;
@@ -11,5 +16,5 @@
 .project-card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 50px;
 }

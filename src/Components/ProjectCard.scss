@@ -1,6 +1,10 @@
-.gradient-box{
-    max-width: 280px;
-    width: 100%;
-    height: 280px;
-    background: brown;
+.gradient-box {
+  max-width: 280px;
+  width: 100%;
+  height: 280px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  background: brown;
+
+  //background: linear-gradient(#E33535, #DC5CF0);
 }
