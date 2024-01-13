@@ -7,10 +7,11 @@ import "./Projects.scss";
 
 export const Projects = () => {
   const [hoveredCard, setHoveredCard] = useState();
+  const [user, setUser] = useState(true)
 
   return (
     <div className="projects">
-      <Header />
+      <Header user={user} />
       <main className="projects-main">
         <div className="projects-main-header">
           <div>

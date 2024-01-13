@@ -17,6 +17,8 @@ export const Editor = () => {
 
   const project = projectsData.find((project) => project.id === id);
 
+  const [user, setUser] = useState(true);
+
   const handleAddNewSection = () => {
     console.log("new section");
     setSections([
@@ -35,7 +37,7 @@ export const Editor = () => {
   console.log(sections);
   return (
     <div className="editor">
-      <Header />
+      <Header user={user} />
 
       <main className="editor-main">
         <div className="editor-main-left">

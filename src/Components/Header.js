@@ -1,12 +1,14 @@
 import "./Header.scss";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ user }) => {
   return (
     <header>
-      <Link to="/projects"><h3>Lyric Library</h3></Link>
+      <Link to="/projects">
+        <h3>Lyric Library</h3>
+      </Link>
 
-      <div className="avatar"></div>
+      {user && <div className="avatar"></div>}
     </header>
   );
 };
