@@ -1,6 +1,7 @@
 .projects-main-header{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 75px;
 }
 
 .projects-main {
@@ -9,9 +10,10 @@
   padding-top: 50px;
 }
 
-.projects-main-desc {
-  margin-bottom: 50px;
+.projects-main-heading{
+  margin-bottom: 12px;
 }
+
 
 .project-card-container {
   display: grid;
