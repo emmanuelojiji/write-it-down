@@ -37,7 +37,7 @@ export const Editor = () => {
   console.log(sections);
   return (
     <div className="editor">
-      <Header user={user} />
+      <Header user={user} showTools={true} />
 
       <main className="editor-main">
         <div className="editor-main-left">
