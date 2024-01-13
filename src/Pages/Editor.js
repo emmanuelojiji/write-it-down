@@ -60,12 +60,7 @@ export const Editor = () => {
                   ))}
                 </div>
               </div>
-              {
-                <Button
-                  text="Add New Section"
-                  onClick={() => handleAddNewSection()}
-                />
-              }
+              
             </div>
             {sections.map((section, index) => (
               <Section

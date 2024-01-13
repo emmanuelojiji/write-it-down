@@ -16,6 +16,7 @@
   .project-header-left {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
   }
 }
 
@@ -36,7 +37,7 @@
   margin-right: 20px;
   font-weight: 600;
   transition: 0.2s ease-in-out;
-
+  max-width: 100%;
 }
 
 .project-status {
@@ -60,13 +61,13 @@
   padding-top: 100px;
 }
 
-.editor-main-left{
+.editor-main-left {
   display: flex;
   justify-content: center;
 }
 
-.editor-main-left-content{
-  width:100%;
+.editor-main-left-content {
+  width: 100%;
   max-width: 500px;
 }
 

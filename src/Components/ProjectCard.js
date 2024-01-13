@@ -7,7 +7,6 @@ import { Button } from "../Components/Button";
 
 export const ProjectCard = ({ title, desc, id,}) => {
 
-  const [showContinue, setShowContinue] = useState(false)
 
   return (
     <Link to={`/editor/${id}`}>
