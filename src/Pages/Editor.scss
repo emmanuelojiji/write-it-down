@@ -97,16 +97,37 @@
   opacity: 0.5;
 }
 
-.shake {
-  animation: shake 0.4s;
+.shake-left {
+  animation: shake-left 0.4s;
   animation-delay: 0.2s;
-  @keyframes shake {
+
+  @keyframes shake-left {
     0% {
       transform: translateX(0);
     }
 
     50% {
       transform: translateX(-20px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+.shake-right {
+  animation: shake-right 0.4s;
+  animation-delay: 0.2s;
+
+ 
+  @keyframes shake-right {
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(20px);
     }
 
     100% {

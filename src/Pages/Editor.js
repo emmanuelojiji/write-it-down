@@ -43,16 +43,13 @@ export const Editor = () => {
   }, []);
 
   const handleToggleFocus = () => {
-    
-   
-      setIsButtonFocused(true);
+    setIsButtonFocused(true);
 
-      setTimeout(() => {
-        setIsButtonFocused(false);
-      }, 5000);
-    
+    setTimeout(() => {
+      setIsButtonFocused(false);
+    }, 5000);
   };
-
+  
   return (
     <div className="editor">
       <Header user={user} showTools={true} />
@@ -60,7 +57,9 @@ export const Editor = () => {
       <main className="editor-main">
         <div className="editor-main-left">
           <div
-            className={`editor-main-left-content ${helperVisible && "shake"}`}
+            className={`editor-main-left-content ${
+              helperVisible ? "shake-left" : "shake-right"
+            }`}
           >
             <div className="project-header">
               <div className="project-header-left">
@@ -116,7 +115,6 @@ export const Editor = () => {
           sections={sections}
           setSections={setSections}
           selectedSection={selectedSection}
-          setHelperVisible={setHelperVisible}
         />
       </main>
     </div>
