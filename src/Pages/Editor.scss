@@ -65,12 +65,12 @@
   display: flex;
   justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 .editor-main-left-content {
   width: 100%;
   max-width: 500px;
- 
 }
 
 .new-section-button {
@@ -79,9 +79,22 @@
   border-radius: 100%;
   background: black;
   position: fixed;
-  bottom: 50px;
-  left: 500px;
+  bottom: 10%;
+  left: 5vw;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background: black;
+  }
+}
+
+.in-focus {
+  background: black;
+}
+
+.out-of-focus {
+  opacity: 0.5;
 }
 
 .shake {

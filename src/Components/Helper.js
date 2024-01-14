@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import "./Helper.scss";
 
 export const Helper = ({
@@ -5,6 +6,7 @@ export const Helper = ({
   sections,
   setSections,
   selectedSection,
+  setHelperVisible,
 }) => {
   const handleToggleLock = (index) => {
     const updatedSections = [...sections];
@@ -18,8 +20,23 @@ export const Helper = ({
     console.log(sections[index].locked);
   };
 
+  const helperRef = useRef(null);
+
+  const handleOutsideHelperClick = (e) => {
+    if (helperRef.current && !helperRef.current.contains(e.target)) {
+      setHelperVisible(false);
+    }
+  };
+
+  document.addEventListener("mousedown", (e) => {
+    handleOutsideHelperClick(e);
+  });
+
   return (
-    <aside className={`helper ${helperVisible && "helper-visible"}`}>
+    <aside
+      className={`helper ${helperVisible && "helper-visible"}`}
+      ref={helperRef}
+    >
       <div className="helper-inner">
         <h3>Helper</h3>
         <button

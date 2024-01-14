@@ -1,5 +1,5 @@
 import "./Editor.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Section } from "../Components/Section";
 import { sectionsData } from "../Components/sectionsData";
 import { Helper } from "../Components/Helper";
@@ -34,7 +34,25 @@ export const Editor = () => {
     setSelectedSection(sections.length - 0);
   };
 
-  console.log(sections);
+  const [isButtonFocused, setIsButtonFocused] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsButtonFocused(false);
+    }, 5000);
+  }, []);
+
+  const handleToggleFocus = () => {
+    
+   
+      setIsButtonFocused(true);
+
+      setTimeout(() => {
+        setIsButtonFocused(false);
+      }, 5000);
+    
+  };
+
   return (
     <div className="editor">
       <Header user={user} showTools={true} />
@@ -83,12 +101,14 @@ export const Editor = () => {
                 setSections={setSections}
               />
             ))}
-            
           </div>
           <div
-              className="new-section-button"
-              onClick={() => handleAddNewSection()}
-            ></div>
+            className={`new-section-button ${
+              isButtonFocused ? "in-focus" : "out-of-focus"
+            }`}
+            onClick={() => handleAddNewSection()}
+            onMouseEnter={() => handleToggleFocus()}
+          ></div>
         </div>
         <Helper
           helperVisible={helperVisible}
@@ -96,6 +116,7 @@ export const Editor = () => {
           sections={sections}
           setSections={setSections}
           selectedSection={selectedSection}
+          setHelperVisible={setHelperVisible}
         />
       </main>
     </div>
